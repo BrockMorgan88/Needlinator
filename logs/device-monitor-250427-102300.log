@@ -1,0 +1,1100 @@
+I (6784) s3 ll_cam: DMA Channel=0
+I (6784) cam_hal: cam init ok
+I (6784) sccb: pin_sda 4 pin_scl 5
+I (6784) sccb: sccb_i2c_port=1
+I (6794) camera: Detected camera at address=0x30
+I (6794) camera: Detected OV2640 camera
+I (6794) camera: Camera PID=0x26 VER=0x42 MIDL=0x7f MIDH=0xa2
+I (6874) cam_hal: buffer_size: 16384, half_buffer_size: 1024, node_buffer_size: 1024, node_cnt: 16, total_cnt: 1
+I (6874) cam_hal: Allocating 1843 Byte frame buffer in PSRAM
+I (6874) cam_hal: Allocating 1843 Byte frame buffer in PSRAM
+I (6884) cam_hal: cam config ok
+I (6884) ov2640: Set PLL: clk_2x: 0, clk_div: 0, pclk_auto: 0, pclk_div: 8
+Guru Meditation Error: Core  0 panic'ed (IntegerDivideByZero). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x4200a346  PS      : 0x00060330  A0      : 0x8037cc80  A1      : 0x3fca1ee0  
+A2      : 0x00000000  A3      : 0x00000000  A4      : 0x3fc993e0  A5      : 0x00060023  
+A6      : 0x00000000  A7      : 0x3fc98ea4  A8      : 0x3c040a78  A9      : 0x00000000  
+A10     : 0x3fc9d3bc  A11     : 0x00000000  A12     : 0x00000000  A13     : 0x00000400  
+A14     : 0x00000000  A15     : 0x3fca177c  SAR     : 0x0000000c  EXCCAUSE: 0x00000006  
+EXCVADDR: 0x00000000  LBEG    : 0x40056f5c  LEND    : 0x40056f72  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x4200a343:0x3fca1ee0 0x4037cc7d:0x3fca1f20
+  #0  0x4200a343 in cam_task at .pio/libdeps/esp32s3camlcd/esp32-camera/driver/cam_hal.c:142
+  #1  0x4037cc7d in vPortTaskWrapper at /home/brock/.platformio/packages/framework-espidf@src-b1208ff3612f5ed4a85e916decb6f42c/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+
+
+
+
+
+ELF file SHA256: d24477c89
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x2a (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40376bf9
+  #0  0x40376bf9 in esp_restart_noos at /home/brock/.platformio/packages/framework-espidf@src-b1208ff3612f5ed4a85e916decb6f42c/components/esp_system/port/soc/esp32s3/system_internal.c:160
+
+SPIWP:0xee
+mode:DOUT, clock div:1
+load:0x3fce2810,len:0x15a0
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xd20
+load:0x403cb700,len:0x2f00
+entry 0x403c8920
+I (26) boot: ESP-IDF 5.4.1 2nd stage bootloader
+I (26) boot: compile time Apr 27 2025 10:20:16
+I (26) boot: Multicore bootloader
+I (27) boot: chip revision: v0.1
+I (29) boot: efuse block revision: v1.2
+I (33) boot.esp32s3: Boot SPI Speed : 80MHz
+I (37) boot.esp32s3: SPI Mode       : DOUT
+I (41) boot.esp32s3: SPI Flash Size : 8MB
+I (44) boot: Enabling RNG early entropy source...
+I (49) boot: Partition Table:
+I (51) boot: ## Label            Usage          Type ST Offset   Length
+I (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (71) boot:  2 factory          factory app      00 00 00010000 00100000
+I (77) boot: End of partition table
+I (81) esp_image: segment 0: paddr=00010020 vaddr=3c030020 size=0e5b0h ( 58800) map
+I (99) esp_image: segment 1: paddr=0001e5d8 vaddr=3fc94f00 size=01a40h (  6720) load
+I (101) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=25f90h (155536) map
+I (132) esp_image: segment 3: paddr=00045fb8 vaddr=3fc96940 size=02554h (  9556) load
+I (135) esp_image: segment 4: paddr=00048514 vaddr=40374000 size=10ea0h ( 69280) load
+I (152) esp_image: segment 5: paddr=000593bc vaddr=600fe100 size=0001ch (    28) load
+I (159) boot: Loaded app from partition at offset 0x10000
+I (159) boot: Disabling RNG early entropy source...
+I (170) octal_psram: vendor id    : 0x0d (AP)
+I (170) octal_psram: dev id       : 0x02 (generation 3)
+I (170) octal_psram: density      : 0x03 (64 Mbit)
+I (172) octal_psram: good-die     : 0x01 (Pass)
+I (176) octal_psram: Latency      : 0x01 (Fixed)
+I (181) octal_psram: VCC          : 0x01 (3V)
+I (185) octal_psram: SRF          : 0x01 (Fast Refresh)
+I (190) octal_psram: BurstType    : 0x01 (Hybrid Wrap)
+I (195) octal_psram: BurstLen     : 0x01 (32 Byte)
+I (199) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)
+I (204) octal_psram: DriveStrength: 0x00 (1/1)
+I (209) MSPI Timing: PSRAM timing tuning index: 5
+I (213) esp_psram: Found 8MB PSRAM device
+I (217) esp_psram: Speed: 80MHz
+I (220) cpu_start: Multicore app
+I (655) esp_psram: SPI SRAM memory test OK
+I (664) cpu_start: Pro cpu start user code
+I (664) cpu_start: cpu freq: 160000000 Hz
+I (664) app_init: Application information:
+I (665) app_init: Project name:     CAM
+I (668) app_init: App version:      1
+I (671) app_init: Compile time:     Apr 27 2025 10:19:51
+I (676) app_init: ELF file SHA256:  d24477c89...
+I (681) app_init: ESP-IDF:          5.4.1
+I (684) efuse_init: Min chip rev:     v0.0
+I (688) efuse_init: Max chip rev:     v0.99 
+I (692) efuse_init: Chip rev:         v0.1
+I (696) heap_init: Initializing. RAM available for dynamic allocation:
+I (702) heap_init: At 3FC99810 len 0004FF00 (319 KiB): RAM
+I (707) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM
+I (713) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM
+I (718) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM
+I (723) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator
+I (730) spi_flash: detected chip: gd
+I (733) spi_flash: flash io: dio
+W (736) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`
+I (745) sleep_gpio: Configure to isolate all GPIO pins in sleep state
+I (752) sleep_gpio: Enable automatic switching of GPIO sleep configuration
+I (759) main_task: Started on CPU0
+I (769) main_task: Calling app_main()
+I (6769) s3 ll_cam: DMA Channel=0
+I (6769) cam_hal: cam init ok
+I (6769) sccb: pin_sda 4 pin_scl 5
+I (6769) sccb: sccb_i2c_port=1
+I (6779) camera: Detected camera at address=0x30
+I (6779) camera: Detected OV2640 camera
+I (6779) camera: Camera PID=0x26 VER=0x42 MIDL=0x7f MIDH=0xa2
+I (6859) cam_hal: buffer_size: 16384, half_buffer_size: 1024, node_buffer_size: 1024, node_cnt: 16, total_cnt: 1
+I (6859) cam_hal: Allocating 1843 Byte frame buffer in PSRAM
+I (6859) cam_hal: Allocating 1843 Byte frame buffer in PSRAM
+I (6869) cam_hal: cam config ok
+I (6869) ov2640: Set PLL: clk_2x: 0, clk_div: 0, pclk_auto: 0, pclk_div: 8
+Guru Meditation Error: Core  0 panic'ed (IntegerDivideByZero). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x4200a346  PS      : 0x00060330  A0      : 0x8037cc80  A1      : 0x3fca1ee0  
+A2      : 0x00000000  A3      : 0x00000000  A4      : 0x3fc993e0  A5      : 0x00060023  
+A6      : 0x00000000  A7      : 0x3fc98ea4  A8      : 0x3c040a78  A9      : 0x00000000  
+A10     : 0x3fc9d3bc  A11     : 0x00000000  A12     : 0x00000000  A13     : 0x00000400  
+A14     : 0x00000000  A15     : 0x3fca177c  SAR     : 0x0000000c  EXCCAUSE: 0x00000006  
+EXCVADDR: 0x00000000  LBEG    : 0x40056f5c  LEND    : 0x40056f72  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x4200a343:0x3fca1ee0 0x4037cc7d:0x3fca1f20
+  #0  0x4200a343 in cam_task at .pio/libdeps/esp32s3camlcd/esp32-camera/driver/cam_hal.c:142
+  #1  0x4037cc7d in vPortTaskWrapper at /home/brock/.platformio/packages/framework-espidf@src-b1208ff3612f5ed4a85e916decb6f42c/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+
+
+
+
+
+ELF file SHA256: d24477c89
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x2a (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40376bf9
+  #0  0x40376bf9 in esp_restart_noos at /home/brock/.platformio/packages/framework-espidf@src-b1208ff3612f5ed4a85e916decb6f42c/components/esp_system/port/soc/esp32s3/system_internal.c:160
+
+SPIWP:0xee
+mode:DOUT, clock div:1
+load:0x3fce2810,len:0x15a0
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xd20
+load:0x403cb700,len:0x2f00
+entry 0x403c8920
+I (26) boot: ESP-IDF 5.4.1 2nd stage bootloader
+I (26) boot: compile time Apr 27 2025 10:20:16
+I (26) boot: Multicore bootloader
+I (27) boot: chip revision: v0.1
+I (29) boot: efuse block revision: v1.2
+I (33) boot.esp32s3: Boot SPI Speed : 80MHz
+I (37) boot.esp32s3: SPI Mode       : DOUT
+I (41) boot.esp32s3: SPI Flash Size : 8MB
+I (44) boot: Enabling RNG early entropy source...
+I (49) boot: Partition Table:
+I (51) boot: ## Label            Usage          Type ST Offset   Length
+I (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (71) boot:  2 factory          factory app      00 00 00010000 00100000
+I (77) boot: End of partition table
+I (81) esp_image: segment 0: paddr=00010020 vaddr=3c030020 size=0e5b0h ( 58800) map
+I (99) esp_image: segment 1: paddr=0001e5d8 vaddr=3fc94f00 size=01a40h (  6720) load
+I (101) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=25f90h (155536) map
+I (132) esp_image: segment 3: paddr=00045fb8 vaddr=3fc96940 size=02554h (  9556) load
+I (135) esp_image: segment 4: paddr=00048514 vaddr=40374000 size=10ea0h ( 69280) load
+I (152) esp_image: segment 5: paddr=000593bc vaddr=600fe100 size=0001ch (    28) load
+I (159) boot: Loaded app from partition at offset 0x10000
+I (159) boot: Disabling RNG early entropy source...
+I (170) octal_psram: vendor id    : 0x0d (AP)
+I (170) octal_psram: dev id       : 0x02 (generation 3)
+I (170) octal_psram: density      : 0x03 (64 Mbit)
+I (172) octal_psram: good-die     : 0x01 (Pass)
+I (176) octal_psram: Latency      : 0x01 (Fixed)
+I (181) octal_psram: VCC          : 0x01 (3V)
+I (185) octal_psram: SRF          : 0x01 (Fast Refresh)
+I (190) octal_psram: BurstType    : 0x01 (Hybrid Wrap)
+I (195) octal_psram: BurstLen     : 0x01 (32 Byte)
+I (199) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)
+I (204) octal_psram: DriveStrength: 0x00 (1/1)
+I (209) MSPI Timing: PSRAM timing tuning index: 5
+I (213) esp_psram: Found 8MB PSRAM device
+I (217) esp_psram: Speed: 80MHz
+I (220) cpu_start: Multicore app
+I (655) esp_psram: SPI SRAM memory test OK
+I (664) cpu_start: Pro cpu start user code
+I (664) cpu_start: cpu freq: 160000000 Hz
+I (664) app_init: Application information:
+I (665) app_init: Project name:     CAM
+I (668) app_init: App version:      1
+I (671) app_init: Compile time:     Apr 27 2025 10:19:51
+I (676) app_init: ELF file SHA256:  d24477c89...
+I (681) app_init: ESP-IDF:          5.4.1
+I (684) efuse_init: Min chip rev:     v0.0
+I (688) efuse_init: Max chip rev:     v0.99 
+I (692) efuse_init: Chip rev:         v0.1
+I (696) heap_init: Initializing. RAM available for dynamic allocation:
+I (702) heap_init: At 3FC99810 len 0004FF00 (319 KiB): RAM
+I (707) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM
+I (713) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM
+I (718) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM
+I (723) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator
+I (730) spi_flash: detected chip: gd
+I (733) spi_flash: flash io: dio
+W (736) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`
+I (745) sleep_gpio: Configure to isolate all GPIO pins in sleep state
+I (752) sleep_gpio: Enable automatic switching of GPIO sleep configuration
+I (759) main_task: Started on CPU0
+I (769) main_task: Calling app_main()
+I (6769) s3 ll_cam: DMA Channel=0
+I (6769) cam_hal: cam init ok
+I (6769) sccb: pin_sda 4 pin_scl 5
+I (6769) sccb: sccb_i2c_port=1
+I (6779) camera: Detected camera at address=0x30
+I (6779) camera: Detected OV2640 camera
+I (6779) camera: Camera PID=0x26 VER=0x42 MIDL=0x7f MIDH=0xa2
+I (6859) cam_hal: buffer_size: 16384, half_buffer_size: 1024, node_buffer_size: 1024, node_cnt: 16, total_cnt: 1
+I (6859) cam_hal: Allocating 1843 Byte frame buffer in PSRAM
+I (6859) cam_hal: Allocating 1843 Byte frame buffer in PSRAM
+I (6869) cam_hal: cam config ok
+I (6869) ov2640: Set PLL: clk_2x: 0, clk_div: 0, pclk_auto: 0, pclk_div: 8
+Guru Meditation Error: Core  0 panic'ed (IntegerDivideByZero). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x4200a346  PS      : 0x00060330  A0      : 0x8037cc80  A1      : 0x3fca1ee0  
+A2      : 0x00000000  A3      : 0x00000000  A4      : 0x3fc993e0  A5      : 0x00060023  
+A6      : 0x00000000  A7      : 0x3fc98ea4  A8      : 0x3c040a78  A9      : 0x00000000  
+A10     : 0x3fc9d3bc  A11     : 0x00000000  A12     : 0x00000000  A13     : 0x00000400  
+A14     : 0x00000000  A15     : 0x3fca177c  SAR     : 0x0000000c  EXCCAUSE: 0x00000006  
+EXCVADDR: 0x00000000  LBEG    : 0x40056f5c  LEND    : 0x40056f72  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x4200a343:0x3fca1ee0 0x4037cc7d:0x3fca1f20
+  #0  0x4200a343 in cam_task at .pio/libdeps/esp32s3camlcd/esp32-camera/driver/cam_hal.c:142
+  #1  0x4037cc7d in vPortTaskWrapper at /home/brock/.platformio/packages/framework-espidf@src-b1208ff3612f5ed4a85e916decb6f42c/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+
+
+
+
+
+ELF file SHA256: d24477c89
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x2a (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40376bf9
+  #0  0x40376bf9 in esp_restart_noos at /home/brock/.platformio/packages/framework-espidf@src-b1208ff3612f5ed4a85e916decb6f42c/components/esp_system/port/soc/esp32s3/system_internal.c:160
+
+SPIWP:0xee
+mode:DOUT, clock div:1
+load:0x3fce2810,len:0x15a0
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xd20
+load:0x403cb700,len:0x2f00
+entry 0x403c8920
+I (26) boot: ESP-IDF 5.4.1 2nd stage bootloader
+I (26) boot: compile time Apr 27 2025 10:20:16
+I (26) boot: Multicore bootloader
+I (27) boot: chip revision: v0.1
+I (29) boot: efuse block revision: v1.2
+I (33) boot.esp32s3: Boot SPI Speed : 80MHz
+I (37) boot.esp32s3: SPI Mode       : DOUT
+I (41) boot.esp32s3: SPI Flash Size : 8MB
+I (44) boot: Enabling RNG early entropy source...
+I (49) boot: Partition Table:
+I (51) boot: ## Label            Usage          Type ST Offset   Length
+I (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (71) boot:  2 factory          factory app      00 00 00010000 00100000
+I (77) boot: End of partition table
+I (81) esp_image: segment 0: paddr=00010020 vaddr=3c030020 size=0e5b0h ( 58800) map
+I (99) esp_image: segment 1: paddr=0001e5d8 vaddr=3fc94f00 size=01a40h (  6720) load
+I (101) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=25f90h (155536) map
+I (132) esp_image: segment 3: paddr=00045fb8 vaddr=3fc96940 size=02554h (  9556) load
+I (135) esp_image: segment 4: paddr=00048514 vaddr=40374000 size=10ea0h ( 69280) load
+I (152) esp_image: segment 5: paddr=000593bc vaddr=600fe100 size=0001ch (    28) load
+I (159) boot: Loaded app from partition at offset 0x10000
+I (159) boot: Disabling RNG early entropy source...
+I (170) octal_psram: vendor id    : 0x0d (AP)
+I (170) octal_psram: dev id       : 0x02 (generation 3)
+I (170) octal_psram: density      : 0x03 (64 Mbit)
+I (172) octal_psram: good-die     : 0x01 (Pass)
+I (176) octal_psram: Latency      : 0x01 (Fixed)
+I (181) octal_psram: VCC          : 0x01 (3V)
+I (185) octal_psram: SRF          : 0x01 (Fast Refresh)
+I (190) octal_psram: BurstType    : 0x01 (Hybrid Wrap)
+I (195) octal_psram: BurstLen     : 0x01 (32 Byte)
+I (199) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)
+I (204) octal_psram: DriveStrength: 0x00 (1/1)
+I (209) MSPI Timing: PSRAM timing tuning index: 5
+I (213) esp_psram: Found 8MB PSRAM device
+I (217) esp_psram: Speed: 80MHz
+I (220) cpu_start: Multicore app
+I (655) esp_psram: SPI SRAM memory test OK
+I (664) cpu_start: Pro cpu start user code
+I (664) cpu_start: cpu freq: 160000000 Hz
+I (664) app_init: Application information:
+I (665) app_init: Project name:     CAM
+I (668) app_init: App version:      1
+I (671) app_init: Compile time:     Apr 27 2025 10:19:51
+I (676) app_init: ELF file SHA256:  d24477c89...
+I (681) app_init: ESP-IDF:          5.4.1
+I (684) efuse_init: Min chip rev:     v0.0
+I (688) efuse_init: Max chip rev:     v0.99 
+I (692) efuse_init: Chip rev:         v0.1
+I (696) heap_init: Initializing. RAM available for dynamic allocation:
+I (702) heap_init: At 3FC99810 len 0004FF00 (319 KiB): RAM
+I (707) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM
+I (713) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM
+I (718) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM
+I (723) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator
+I (730) spi_flash: detected chip: gd
+I (733) spi_flash: flash io: dio
+W (736) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`
+I (746) sleep_gpio: Configure to isolate all GPIO pins in sleep state
+I (752) sleep_gpio: Enable automatic switching of GPIO sleep configuration
+I (759) main_task: Started on CPU0
+I (769) main_task: Calling app_main()
+I (6769) s3 ll_cam: DMA Channel=0
+I (6769) cam_hal: cam init ok
+I (6769) sccb: pin_sda 4 pin_scl 5
+I (6769) sccb: sccb_i2c_port=1
+I (6779) camera: Detected camera at address=0x30
+I (6779) camera: Detected OV2640 camera
+I (6779) camera: Camera PID=0x26 VER=0x42 MIDL=0x7f MIDH=0xa2
+I (6859) cam_hal: buffer_size: 16384, half_buffer_size: 1024, node_buffer_size: 1024, node_cnt: 16, total_cnt: 1
+I (6859) cam_hal: Allocating 1843 Byte frame buffer in PSRAM
+I (6859) cam_hal: Allocating 1843 Byte frame buffer in PSRAM
+I (6869) cam_hal: cam config ok
+I (6869) ov2640: Set PLL: clk_2x: 0, clk_div: 0, pclk_auto: 0, pclk_div: 8
+Guru Meditation Error: Core  0 panic'ed (IntegerDivideByZero). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x4200a346  PS      : 0x00060330  A0      : 0x8037cc80  A1      : 0x3fca1ee0  
+A2      : 0x00000000  A3      : 0x00000000  A4      : 0x3fc993e0  A5      : 0x00060023  
+A6      : 0x00000000  A7      : 0x3fc98ea4  A8      : 0x3c040a78  A9      : 0x00000000  
+A10     : 0x3fc9d3bc  A11     : 0x00000000  A12     : 0x00000000  A13     : 0x00000400  
+A14     : 0x00000000  A15     : 0x3fca177c  SAR     : 0x0000000c  EXCCAUSE: 0x00000006  
+EXCVADDR: 0x00000000  LBEG    : 0x40056f5c  LEND    : 0x40056f72  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x4200a343:0x3fca1ee0 0x4037cc7d:0x3fca1f20
+  #0  0x4200a343 in cam_task at .pio/libdeps/esp32s3camlcd/esp32-camera/driver/cam_hal.c:142
+  #1  0x4037cc7d in vPortTaskWrapper at /home/brock/.platformio/packages/framework-espidf@src-b1208ff3612f5ed4a85e916decb6f42c/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+
+
+
+
+
+ELF file SHA256: d24477c89
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x2a (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40376bf9
+  #0  0x40376bf9 in esp_restart_noos at /home/brock/.platformio/packages/framework-espidf@src-b1208ff3612f5ed4a85e916decb6f42c/components/esp_system/port/soc/esp32s3/system_internal.c:160
+
+SPIWP:0xee
+mode:DOUT, clock div:1
+load:0x3fce2810,len:0x15a0
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xd20
+load:0x403cb700,len:0x2f00
+entry 0x403c8920
+I (26) boot: ESP-IDF 5.4.1 2nd stage bootloader
+I (26) boot: compile time Apr 27 2025 10:20:16
+I (26) boot: Multicore bootloader
+I (27) boot: chip revision: v0.1
+I (29) boot: efuse block revision: v1.2
+I (33) boot.esp32s3: Boot SPI Speed : 80MHz
+I (37) boot.esp32s3: SPI Mode       : DOUT
+I (41) boot.esp32s3: SPI Flash Size : 8MB
+I (44) boot: Enabling RNG early entropy source...
+I (49) boot: Partition Table:
+I (51) boot: ## Label            Usage          Type ST Offset   Length
+I (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (71) boot:  2 factory          factory app      00 00 00010000 00100000
+I (77) boot: End of partition table
+I (81) esp_image: segment 0: paddr=00010020 vaddr=3c030020 size=0e5b0h ( 58800) map
+I (99) esp_image: segment 1: paddr=0001e5d8 vaddr=3fc94f00 size=01a40h (  6720) load
+I (101) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=25f90h (155536) map
+I (132) esp_image: segment 3: paddr=00045fb8 vaddr=3fc96940 size=02554h (  9556) load
+I (135) esp_image: segment 4: paddr=00048514 vaddr=40374000 size=10ea0h ( 69280) load
+I (152) esp_image: segment 5: paddr=000593bc vaddr=600fe100 size=0001ch (    28) load
+I (159) boot: Loaded app from partition at offset 0x10000
+I (159) boot: Disabling RNG early entropy source...
+I (170) octal_psram: vendor id    : 0x0d (AP)
+I (170) octal_psram: dev id       : 0x02 (generation 3)
+I (170) octal_psram: density      : 0x03 (64 Mbit)
+I (172) octal_psram: good-die     : 0x01 (Pass)
+I (176) octal_psram: Latency      : 0x01 (Fixed)
+I (181) octal_psram: VCC          : 0x01 (3V)
+I (185) octal_psram: SRF          : 0x01 (Fast Refresh)
+I (190) octal_psram: BurstType    : 0x01 (Hybrid Wrap)
+I (195) octal_psram: BurstLen     : 0x01 (32 Byte)
+I (199) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)
+I (204) octal_psram: DriveStrength: 0x00 (1/1)
+I (209) MSPI Timing: PSRAM timing tuning index: 5
+I (213) esp_psram: Found 8MB PSRAM device
+I (217) esp_psram: Speed: 80MHz
+I (220) cpu_start: Multicore app
+I (655) esp_psram: SPI SRAM memory test OK
+I (664) cpu_start: Pro cpu start user code
+I (664) cpu_start: cpu freq: 160000000 Hz
+I (664) app_init: Application information:
+I (665) app_init: Project name:     CAM
+I (668) app_init: App version:      1
+I (671) app_init: Compile time:     Apr 27 2025 10:19:51
+I (676) app_init: ELF file SHA256:  d24477c89...
+I (681) app_init: ESP-IDF:          5.4.1
+I (684) efuse_init: Min chip rev:     v0.0
+I (688) efuse_init: Max chip rev:     v0.99 
+I (692) efuse_init: Chip rev:         v0.1
+I (696) heap_init: Initializing. RAM available for dynamic allocation:
+I (702) heap_init: At 3FC99810 len 0004FF00 (319 KiB): RAM
+I (707) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM
+I (713) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM
+I (718) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM
+I (723) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator
+I (730) spi_flash: detected chip: gd
+I (733) spi_flash: flash io: dio
+W (736) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`
+I (746) sleep_gpio: Configure to isolate all GPIO pins in sleep state
+I (752) sleep_gpio: Enable automatic switching of GPIO sleep configuration
+I (759) main_task: Started on CPU0
+I (769) main_task: Calling app_main()
+I (6769) s3 ll_cam: DMA Channel=0
+I (6769) cam_hal: cam init ok
+I (6769) sccb: pin_sda 4 pin_scl 5
+I (6769) sccb: sccb_i2c_port=1
+I (6779) camera: Detected camera at address=0x30
+I (6779) camera: Detected OV2640 camera
+I (6779) camera: Camera PID=0x26 VER=0x42 MIDL=0x7f MIDH=0xa2
+I (6859) cam_hal: buffer_size: 16384, half_buffer_size: 1024, node_buffer_size: 1024, node_cnt: 16, total_cnt: 1
+I (6859) cam_hal: Allocating 1843 Byte frame buffer in PSRAM
+I (6859) cam_hal: Allocating 1843 Byte frame buffer in PSRAM
+I (6869) cam_hal: cam config ok
+I (6869) ov2640: Set PLL: clk_2x: 0, clk_div: 0, pclk_auto: 0, pclk_div: 8
+Guru Meditation Error: Core  0 panic'ed (IntegerDivideByZero). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x4200a346  PS      : 0x00060330  A0      : 0x8037cc80  A1      : 0x3fca1ee0  
+A2      : 0x00000000  A3      : 0x00000000  A4      : 0x3fc993e0  A5      : 0x00060023  
+A6      : 0x00000000  A7      : 0x3fc98ea4  A8      : 0x3c040a78  A9      : 0x00000000  
+A10     : 0x3fc9d3bc  A11     : 0x00000000  A12     : 0x00000000  A13     : 0x00000400  
+A14     : 0x00000000  A15     : 0x3fca177c  SAR     : 0x0000000c  EXCCAUSE: 0x00000006  
+EXCVADDR: 0x00000000  LBEG    : 0x40056f5c  LEND    : 0x40056f72  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x4200a343:0x3fca1ee0 0x4037cc7d:0x3fca1f20
+  #0  0x4200a343 in cam_task at .pio/libdeps/esp32s3camlcd/esp32-camera/driver/cam_hal.c:142
+  #1  0x4037cc7d in vPortTaskWrapper at /home/brock/.platformio/packages/framework-espidf@src-b1208ff3612f5ed4a85e916decb6f42c/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+
+
+
+
+
+ELF file SHA256: d24477c89
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x2a (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40376bf9
+  #0  0x40376bf9 in esp_restart_noos at /home/brock/.platformio/packages/framework-espidf@src-b1208ff3612f5ed4a85e916decb6f42c/components/esp_system/port/soc/esp32s3/system_internal.c:160
+
+SPIWP:0xee
+mode:DOUT, clock div:1
+load:0x3fce2810,len:0x15a0
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xd20
+load:0x403cb700,len:0x2f00
+entry 0x403c8920
+I (26) boot: ESP-IDF 5.4.1 2nd stage bootloader
+I (26) boot: compile time Apr 27 2025 10:20:16
+I (26) boot: Multicore bootloader
+I (27) boot: chip revision: v0.1
+I (29) boot: efuse block revision: v1.2
+I (33) boot.esp32s3: Boot SPI Speed : 80MHz
+I (37) boot.esp32s3: SPI Mode       : DOUT
+I (41) boot.esp32s3: SPI Flash Size : 8MB
+I (44) boot: Enabling RNG early entropy source...
+I (49) boot: Partition Table:
+I (51) boot: ## Label            Usage          Type ST Offset   Length
+I (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (71) boot:  2 factory          factory app      00 00 00010000 00100000
+I (77) boot: End of partition table
+I (81) esp_image: segment 0: paddr=00010020 vaddr=3c030020 size=0e5b0h ( 58800) map
+I (99) esp_image: segment 1: paddr=0001e5d8 vaddr=3fc94f00 size=01a40h (  6720) load
+I (101) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=25f90h (155536) map
+I (132) esp_image: segment 3: paddr=00045fb8 vaddr=3fc96940 size=02554h (  9556) load
+I (135) esp_image: segment 4: paddr=00048514 vaddr=40374000 size=10ea0h ( 69280) load
+I (152) esp_image: segment 5: paddr=000593bc vaddr=600fe100 size=0001ch (    28) load
+I (159) boot: Loaded app from partition at offset 0x10000
+I (159) boot: Disabling RNG early entropy source...
+I (170) octal_psram: vendor id    : 0x0d (AP)
+I (170) octal_psram: dev id       : 0x02 (generation 3)
+I (170) octal_psram: density      : 0x03 (64 Mbit)
+I (172) octal_psram: good-die     : 0x01 (Pass)
+I (176) octal_psram: Latency      : 0x01 (Fixed)
+I (181) octal_psram: VCC          : 0x01 (3V)
+I (185) octal_psram: SRF          : 0x01 (Fast Refresh)
+I (190) octal_psram: BurstType    : 0x01 (Hybrid Wrap)
+I (195) octal_psram: BurstLen     : 0x01 (32 Byte)
+I (199) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)
+I (204) octal_psram: DriveStrength: 0x00 (1/1)
+I (209) MSPI Timing: PSRAM timing tuning index: 5
+I (213) esp_psram: Found 8MB PSRAM device
+I (217) esp_psram: Speed: 80MHz
+I (220) cpu_start: Multicore app
+I (655) esp_psram: SPI SRAM memory test OK
+I (664) cpu_start: Pro cpu start user code
+I (664) cpu_start: cpu freq: 160000000 Hz
+I (664) app_init: Application information:
+I (665) app_init: Project name:     CAM
+I (668) app_init: App version:      1
+I (671) app_init: Compile time:     Apr 27 2025 10:19:51
+I (676) app_init: ELF file SHA256:  d24477c89...
+I (681) app_init: ESP-IDF:          5.4.1
+I (684) efuse_init: Min chip rev:     v0.0
+I (688) efuse_init: Max chip rev:     v0.99 
+I (692) efuse_init: Chip rev:         v0.1
+I (696) heap_init: Initializing. RAM available for dynamic allocation:
+I (702) heap_init: At 3FC99810 len 0004FF00 (319 KiB): RAM
+I (707) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM
+I (713) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM
+I (718) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM
+I (723) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator
+I (730) spi_flash: detected chip: gd
+I (733) spi_flash: flash io: dio
+W (736) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`
+I (746) sleep_gpio: Configure to isolate all GPIO pins in sleep state
+I (752) sleep_gpio: Enable automatic switching of GPIO sleep configuration
+I (759) main_task: Started on CPU0
+I (769) main_task: Calling app_main()
+I (6769) s3 ll_cam: DMA Channel=0
+I (6769) cam_hal: cam init ok
+I (6769) sccb: pin_sda 4 pin_scl 5
+I (6769) sccb: sccb_i2c_port=1
+I (6779) camera: Detected camera at address=0x30
+I (6779) camera: Detected OV2640 camera
+I (6779) camera: Camera PID=0x26 VER=0x42 MIDL=0x7f MIDH=0xa2
+I (6859) cam_hal: buffer_size: 16384, half_buffer_size: 1024, node_buffer_size: 1024, node_cnt: 16, total_cnt: 1
+I (6859) cam_hal: Allocating 1843 Byte frame buffer in PSRAM
+I (6859) cam_hal: Allocating 1843 Byte frame buffer in PSRAM
+I (6869) cam_hal: cam config ok
+I (6869) ov2640: Set PLL: clk_2x: 0, clk_div: 0, pclk_auto: 0, pclk_div: 8
+Guru Meditation Error: Core  0 panic'ed (IntegerDivideByZero). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x4200a346  PS      : 0x00060330  A0      : 0x8037cc80  A1      : 0x3fca1ee0  
+A2      : 0x00000000  A3      : 0x00000000  A4      : 0x3fc993e0  A5      : 0x00060023  
+A6      : 0x00000000  A7      : 0x3fc98ea4  A8      : 0x3c040a78  A9      : 0x00000000  
+A10     : 0x3fc9d3bc  A11     : 0x00000000  A12     : 0x00000000  A13     : 0x00000400  
+A14     : 0x00000000  A15     : 0x3fca177c  SAR     : 0x0000000c  EXCCAUSE: 0x00000006  
+EXCVADDR: 0x00000000  LBEG    : 0x40056f5c  LEND    : 0x40056f72  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x4200a343:0x3fca1ee0 0x4037cc7d:0x3fca1f20
+  #0  0x4200a343 in cam_task at .pio/libdeps/esp32s3camlcd/esp32-camera/driver/cam_hal.c:142
+  #1  0x4037cc7d in vPortTaskWrapper at /home/brock/.platformio/packages/framework-espidf@src-b1208ff3612f5ed4a85e916decb6f42c/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+
+
+
+
+
+ELF file SHA256: d24477c89
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x2a (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40376bf9
+  #0  0x40376bf9 in esp_restart_noos at /home/brock/.platformio/packages/framework-espidf@src-b1208ff3612f5ed4a85e916decb6f42c/components/esp_system/port/soc/esp32s3/system_internal.c:160
+
+SPIWP:0xee
+mode:DOUT, clock div:1
+load:0x3fce2810,len:0x15a0
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xd20
+load:0x403cb700,len:0x2f00
+entry 0x403c8920
+I (26) boot: ESP-IDF 5.4.1 2nd stage bootloader
+I (26) boot: compile time Apr 27 2025 10:20:16
+I (26) boot: Multicore bootloader
+I (27) boot: chip revision: v0.1
+I (29) boot: efuse block revision: v1.2
+I (33) boot.esp32s3: Boot SPI Speed : 80MHz
+I (37) boot.esp32s3: SPI Mode       : DOUT
+I (41) boot.esp32s3: SPI Flash Size : 8MB
+I (44) boot: Enabling RNG early entropy source...
+I (49) boot: Partition Table:
+I (51) boot: ## Label            Usage          Type ST Offset   Length
+I (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (71) boot:  2 factory          factory app      00 00 00010000 00100000
+I (77) boot: End of partition table
+I (81) esp_image: segment 0: paddr=00010020 vaddr=3c030020 size=0e5b0h ( 58800) map
+I (99) esp_image: segment 1: paddr=0001e5d8 vaddr=3fc94f00 size=01a40h (  6720) load
+I (101) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=25f90h (155536) map
+I (132) esp_image: segment 3: paddr=00045fb8 vaddr=3fc96940 size=02554h (  9556) load
+I (135) esp_image: segment 4: paddr=00048514 vaddr=40374000 size=10ea0h ( 69280) load
+I (152) esp_image: segment 5: paddr=000593bc vaddr=600fe100 size=0001ch (    28) load
+I (159) boot: Loaded app from partition at offset 0x10000
+I (159) boot: Disabling RNG early entropy source...
+I (170) octal_psram: vendor id    : 0x0d (AP)
+I (170) octal_psram: dev id       : 0x02 (generation 3)
+I (170) octal_psram: density      : 0x03 (64 Mbit)
+I (172) octal_psram: good-die     : 0x01 (Pass)
+I (176) octal_psram: Latency      : 0x01 (Fixed)
+I (181) octal_psram: VCC          : 0x01 (3V)
+I (185) octal_psram: SRF          : 0x01 (Fast Refresh)
+I (190) octal_psram: BurstType    : 0x01 (Hybrid Wrap)
+I (195) octal_psram: BurstLen     : 0x01 (32 Byte)
+I (199) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)
+I (204) octal_psram: DriveStrength: 0x00 (1/1)
+I (209) MSPI Timing: PSRAM timing tuning index: 5
+I (213) esp_psram: Found 8MB PSRAM device
+I (217) esp_psram: Speed: 80MHz
+I (220) cpu_start: Multicore app
+I (655) esp_psram: SPI SRAM memory test OK
+I (664) cpu_start: Pro cpu start user code
+I (664) cpu_start: cpu freq: 160000000 Hz
+I (664) app_init: Application information:
+I (665) app_init: Project name:     CAM
+I (668) app_init: App version:      1
+I (671) app_init: Compile time:     Apr 27 2025 10:19:51
+I (676) app_init: ELF file SHA256:  d24477c89...
+I (681) app_init: ESP-IDF:          5.4.1
+I (684) efuse_init: Min chip rev:     v0.0
+I (688) efuse_init: Max chip rev:     v0.99 
+I (692) efuse_init: Chip rev:         v0.1
+I (696) heap_init: Initializing. RAM available for dynamic allocation:
+I (702) heap_init: At 3FC99810 len 0004FF00 (319 KiB): RAM
+I (707) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM
+I (713) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM
+I (718) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM
+I (723) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator
+I (730) spi_flash: detected chip: gd
+I (733) spi_flash: flash io: dio
+W (736) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`
+I (746) sleep_gpio: Configure to isolate all GPIO pins in sleep state
+I (752) sleep_gpio: Enable automatic switching of GPIO sleep configuration
+I (759) main_task: Started on CPU0
+I (769) main_task: Calling app_main()
+I (6769) s3 ll_cam: DMA Channel=0
+I (6769) cam_hal: cam init ok
+I (6769) sccb: pin_sda 4 pin_scl 5
+I (6769) sccb: sccb_i2c_port=1
+I (6779) camera: Detected camera at address=0x30
+I (6779) camera: Detected OV2640 camera
+I (6779) camera: Camera PID=0x26 VER=0x42 MIDL=0x7f MIDH=0xa2
+I (6859) cam_hal: buffer_size: 16384, half_buffer_size: 1024, node_buffer_size: 1024, node_cnt: 16, total_cnt: 1
+I (6859) cam_hal: Allocating 1843 Byte frame buffer in PSRAM
+I (6859) cam_hal: Allocating 1843 Byte frame buffer in PSRAM
+I (6869) cam_hal: cam config ok
+I (6869) ov2640: Set PLL: clk_2x: 0, clk_div: 0, pclk_auto: 0, pclk_div: 8
+Guru Meditation Error: Core  0 panic'ed (IntegerDivideByZero). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x4200a346  PS      : 0x00060330  A0      : 0x8037cc80  A1      : 0x3fca1ee0  
+A2      : 0x00000000  A3      : 0x00000000  A4      : 0x3fc993e0  A5      : 0x00060023  
+A6      : 0x00000000  A7      : 0x3fc98ea4  A8      : 0x3c040a78  A9      : 0x00000000  
+A10     : 0x3fc9d3bc  A11     : 0x00000000  A12     : 0x00000000  A13     : 0x00000400  
+A14     : 0x00000000  A15     : 0x3fca177c  SAR     : 0x0000000c  EXCCAUSE: 0x00000006  
+EXCVADDR: 0x00000000  LBEG    : 0x40056f5c  LEND    : 0x40056f72  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x4200a343:0x3fca1ee0 0x4037cc7d:0x3fca1f20
+  #0  0x4200a343 in cam_task at .pio/libdeps/esp32s3camlcd/esp32-camera/driver/cam_hal.c:142
+  #1  0x4037cc7d in vPortTaskWrapper at /home/brock/.platformio/packages/framework-espidf@src-b1208ff3612f5ed4a85e916decb6f42c/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+
+
+
+
+
+ELF file SHA256: d24477c89
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x2a (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40376bf9
+  #0  0x40376bf9 in esp_restart_noos at /home/brock/.platformio/packages/framework-espidf@src-b1208ff3612f5ed4a85e916decb6f42c/components/esp_system/port/soc/esp32s3/system_internal.c:160
+
+SPIWP:0xee
+mode:DOUT, clock div:1
+load:0x3fce2810,len:0x15a0
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xd20
+load:0x403cb700,len:0x2f00
+entry 0x403c8920
+I (26) boot: ESP-IDF 5.4.1 2nd stage bootloader
+I (26) boot: compile time Apr 27 2025 10:20:16
+I (26) boot: Multicore bootloader
+I (27) boot: chip revision: v0.1
+I (29) boot: efuse block revision: v1.2
+I (33) boot.esp32s3: Boot SPI Speed : 80MHz
+I (37) boot.esp32s3: SPI Mode       : DOUT
+I (41) boot.esp32s3: SPI Flash Size : 8MB
+I (44) boot: Enabling RNG early entropy source...
+I (49) boot: Partition Table:
+I (51) boot: ## Label            Usage          Type ST Offset   Length
+I (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (71) boot:  2 factory          factory app      00 00 00010000 00100000
+I (77) boot: End of partition table
+I (81) esp_image: segment 0: paddr=00010020 vaddr=3c030020 size=0e5b0h ( 58800) map
+I (99) esp_image: segment 1: paddr=0001e5d8 vaddr=3fc94f00 size=01a40h (  6720) load
+I (101) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=25f90h (155536) map
+I (132) esp_image: segment 3: paddr=00045fb8 vaddr=3fc96940 size=02554h (  9556) load
+I (135) esp_image: segment 4: paddr=00048514 vaddr=40374000 size=10ea0h ( 69280) load
+I (152) esp_image: segment 5: paddr=000593bc vaddr=600fe100 size=0001ch (    28) load
+I (159) boot: Loaded app from partition at offset 0x10000
+I (159) boot: Disabling RNG early entropy source...
+I (170) octal_psram: vendor id    : 0x0d (AP)
+I (170) octal_psram: dev id       : 0x02 (generation 3)
+I (170) octal_psram: density      : 0x03 (64 Mbit)
+I (172) octal_psram: good-die     : 0x01 (Pass)
+I (176) octal_psram: Latency      : 0x01 (Fixed)
+I (181) octal_psram: VCC          : 0x01 (3V)
+I (185) octal_psram: SRF          : 0x01 (Fast Refresh)
+I (190) octal_psram: BurstType    : 0x01 (Hybrid Wrap)
+I (195) octal_psram: BurstLen     : 0x01 (32 Byte)
+I (199) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)
+I (204) octal_psram: DriveStrength: 0x00 (1/1)
+I (209) MSPI Timing: PSRAM timing tuning index: 5
+I (213) esp_psram: Found 8MB PSRAM device
+I (217) esp_psram: Speed: 80MHz
+I (220) cpu_start: Multicore app
+I (655) esp_psram: SPI SRAM memory test OK
+I (664) cpu_start: Pro cpu start user code
+I (664) cpu_start: cpu freq: 160000000 Hz
+I (664) app_init: Application information:
+I (665) app_init: Project name:     CAM
+I (668) app_init: App version:      1
+I (671) app_init: Compile time:     Apr 27 2025 10:19:51
+I (676) app_init: ELF file SHA256:  d24477c89...
+I (681) app_init: ESP-IDF:          5.4.1
+I (684) efuse_init: Min chip rev:     v0.0
+I (688) efuse_init: Max chip rev:     v0.99 
+I (692) efuse_init: Chip rev:         v0.1
+I (696) heap_init: Initializing. RAM available for dynamic allocation:
+I (702) heap_init: At 3FC99810 len 0004FF00 (319 KiB): RAM
+I (707) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM
+I (713) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM
+I (718) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM
+I (723) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator
+I (730) spi_flash: detected chip: gd
+I (733) spi_flash: flash io: dio
+W (736) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`
+I (746) sleep_gpio: Configure to isolate all GPIO pins in sleep state
+I (752) sleep_gpio: Enable automatic switching of GPIO sleep configuration
+I (759) main_task: Started on CPU0
+I (769) main_task: Calling app_main()
+I (6769) s3 ll_cam: DMA Channel=0
+I (6769) cam_hal: cam init ok
+I (6769) sccb: pin_sda 4 pin_scl 5
+I (6769) sccb: sccb_i2c_port=1
+I (6779) camera: Detected camera at address=0x30
+I (6779) camera: Detected OV2640 camera
+I (6779) camera: Camera PID=0x26 VER=0x42 MIDL=0x7f MIDH=0xa2
+I (6859) cam_hal: buffer_size: 16384, half_buffer_size: 1024, node_buffer_size: 1024, node_cnt: 16, total_cnt: 1
+I (6859) cam_hal: Allocating 1843 Byte frame buffer in PSRAM
+I (6859) cam_hal: Allocating 1843 Byte frame buffer in PSRAM
+I (6869) cam_hal: cam config ok
+I (6869) ov2640: Set PLL: clk_2x: 0, clk_div: 0, pclk_auto: 0, pclk_div: 8
+Guru Meditation Error: Core  0 panic'ed (IntegerDivideByZero). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x4200a346  PS      : 0x00060330  A0      : 0x8037cc80  A1      : 0x3fca1ee0  
+A2      : 0x00000000  A3      : 0x00000000  A4      : 0x3fc993e0  A5      : 0x00060023  
+A6      : 0x00000000  A7      : 0x3fc98ea4  A8      : 0x3c040a78  A9      : 0x00000000  
+A10     : 0x3fc9d3bc  A11     : 0x00000000  A12     : 0x00000000  A13     : 0x00000400  
+A14     : 0x00000000  A15     : 0x3fca177c  SAR     : 0x0000000c  EXCCAUSE: 0x00000006  
+EXCVADDR: 0x00000000  LBEG    : 0x40056f5c  LEND    : 0x40056f72  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x4200a343:0x3fca1ee0 0x4037cc7d:0x3fca1f20
+  #0  0x4200a343 in cam_task at .pio/libdeps/esp32s3camlcd/esp32-camera/driver/cam_hal.c:142
+  #1  0x4037cc7d in vPortTaskWrapper at /home/brock/.platformio/packages/framework-espidf@src-b1208ff3612f5ed4a85e916decb6f42c/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+
+
+
+
+
+ELF file SHA256: d24477c89
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x2a (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40376bf9
+  #0  0x40376bf9 in esp_restart_noos at /home/brock/.platformio/packages/framework-espidf@src-b1208ff3612f5ed4a85e916decb6f42c/components/esp_system/port/soc/esp32s3/system_internal.c:160
+
+SPIWP:0xee
+mode:DOUT, clock div:1
+load:0x3fce2810,len:0x15a0
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xd20
+load:0x403cb700,len:0x2f00
+entry 0x403c8920
+I (26) boot: ESP-IDF 5.4.1 2nd stage bootloader
+I (26) boot: compile time Apr 27 2025 10:20:16
+I (26) boot: Multicore bootloader
+I (27) boot: chip revision: v0.1
+I (29) boot: efuse block revision: v1.2
+I (33) boot.esp32s3: Boot SPI Speed : 80MHz
+I (37) boot.esp32s3: SPI Mode       : DOUT
+I (41) boot.esp32s3: SPI Flash Size : 8MB
+I (44) boot: Enabling RNG early entropy source...
+I (49) boot: Partition Table:
+I (51) boot: ## Label            Usage          Type ST Offset   Length
+I (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (71) boot:  2 factory          factory app      00 00 00010000 00100000
+I (77) boot: End of partition table
+I (81) esp_image: segment 0: paddr=00010020 vaddr=3c030020 size=0e5b0h ( 58800) map
+I (99) esp_image: segment 1: paddr=0001e5d8 vaddr=3fc94f00 size=01a40h (  6720) load
+I (101) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=25f90h (155536) map
+I (132) esp_image: segment 3: paddr=00045fb8 vaddr=3fc96940 size=02554h (  9556) load
+I (135) esp_image: segment 4: paddr=00048514 vaddr=40374000 size=10ea0h ( 69280) load
+I (152) esp_image: segment 5: paddr=000593bc vaddr=600fe100 size=0001ch (    28) load
+I (159) boot: Loaded app from partition at offset 0x10000
+I (159) boot: Disabling RNG early entropy source...
+I (170) octal_psram: vendor id    : 0x0d (AP)
+I (170) octal_psram: dev id       : 0x02 (generation 3)
+I (170) octal_psram: density      : 0x03 (64 Mbit)
+I (172) octal_psram: good-die     : 0x01 (Pass)
+I (176) octal_psram: Latency      : 0x01 (Fixed)
+I (181) octal_psram: VCC          : 0x01 (3V)
+I (185) octal_psram: SRF          : 0x01 (Fast Refresh)
+I (190) octal_psram: BurstType    : 0x01 (Hybrid Wrap)
+I (195) octal_psram: BurstLen     : 0x01 (32 Byte)
+I (199) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)
+I (204) octal_psram: DriveStrength: 0x00 (1/1)
+I (209) MSPI Timing: PSRAM timing tuning index: 5
+I (213) esp_psram: Found 8MB PSRAM device
+I (217) esp_psram: Speed: 80MHz
+I (220) cpu_start: Multicore app
+I (655) esp_psram: SPI SRAM memory test OK
+I (664) cpu_start: Pro cpu start user code
+I (664) cpu_start: cpu freq: 160000000 Hz
+I (664) app_init: Application information:
+I (665) app_init: Project name:     CAM
+I (668) app_init: App version:      1
+I (671) app_init: Compile time:     Apr 27 2025 10:19:51
+I (676) app_init: ELF file SHA256:  d24477c89...
+I (681) app_init: ESP-IDF:          5.4.1
+I (684) efuse_init: Min chip rev:     v0.0
+I (688) efuse_init: Max chip rev:     v0.99 
+I (692) efuse_init: Chip rev:         v0.1
+I (696) heap_init: Initializing. RAM available for dynamic allocation:
+I (702) heap_init: At 3FC99810 len 0004FF00 (319 KiB): RAM
+I (707) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM
+I (713) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM
+I (718) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM
+I (723) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator
+I (730) spi_flash: detected chip: gd
+I (733) spi_flash: flash io: dio
+W (736) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`
+I (746) sleep_gpio: Configure to isolate all GPIO pins in sleep state
+I (752) sleep_gpio: Enable automatic switching of GPIO sleep configuration
+I (759) main_task: Started on CPU0
+I (769) main_task: Calling app_main()
+I (6769) s3 ll_cam: DMA Channel=0
+I (6769) cam_hal: cam init ok
+I (6769) sccb: pin_sda 4 pin_scl 5
+I (6769) sccb: sccb_i2c_port=1
+I (6779) camera: Detected camera at address=0x30
+I (6779) camera: Detected OV2640 camera
+I (6779) camera: Camera PID=0x26 VER=0x42 MIDL=0x7f MIDH=0xa2
+I (6859) cam_hal: buffer_size: 16384, half_buffer_size: 1024, node_buffer_size: 1024, node_cnt: 16, total_cnt: 1
+I (6859) cam_hal: Allocating 1843 Byte frame buffer in PSRAM
+I (6859) cam_hal: Allocating 1843 Byte frame buffer in PSRAM
+I (6869) cam_hal: cam config ok
+I (6869) ov2640: Set PLL: clk_2x: 0, clk_div: 0, pclk_auto: 0, pclk_div: 8
+Guru Meditation Error: Core  0 panic'ed (IntegerDivideByZero). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x4200a346  PS      : 0x00060330  A0      : 0x8037cc80  A1      : 0x3fca1ee0  
+A2      : 0x00000000  A3      : 0x00000000  A4      : 0x3fc993e0  A5      : 0x00060023  
+A6      : 0x00000000  A7      : 0x3fc98ea4  A8      : 0x3c040a78  A9      : 0x00000000  
+A10     : 0x3fc9d3bc  A11     : 0x00000000  A12     : 0x00000000  A13     : 0x00000400  
+A14     : 0x00000000  A15     : 0x3fca177c  SAR     : 0x0000000c  EXCCAUSE: 0x00000006  
+EXCVADDR: 0x00000000  LBEG    : 0x40056f5c  LEND    : 0x40056f72  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x4200a343:0x3fca1ee0 0x4037cc7d:0x3fca1f20
+  #0  0x4200a343 in cam_task at .pio/libdeps/esp32s3camlcd/esp32-camera/driver/cam_hal.c:142
+  #1  0x4037cc7d in vPortTaskWrapper at /home/brock/.platformio/packages/framework-espidf@src-b1208ff3612f5ed4a85e916decb6f42c/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+
+
+
+
+
+ELF file SHA256: d24477c89
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x2a (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40376bf9
+  #0  0x40376bf9 in esp_restart_noos at /home/brock/.platformio/packages/framework-espidf@src-b1208ff3612f5ed4a85e916decb6f42c/components/esp_system/port/soc/esp32s3/system_internal.c:160
+
+SPIWP:0xee
+mode:DOUT, clock div:1
+load:0x3fce2810,len:0x15a0
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xd20
+load:0x403cb700,len:0x2f00
+entry 0x403c8920
+I (26) boot: ESP-IDF 5.4.1 2nd stage bootloader
+I (26) boot: compile time Apr 27 2025 10:20:16
+I (26) boot: Multicore bootloader
+I (27) boot: chip revision: v0.1
+I (29) boot: efuse block revision: v1.2
+I (33) boot.esp32s3: Boot SPI Speed : 80MHz
+I (37) boot.esp32s3: SPI Mode       : DOUT
+I (41) boot.esp32s3: SPI Flash Size : 8MB
+I (44) boot: Enabling RNG early entropy source...
+I (49) boot: Partition Table:
+I (51) boot: ## Label            Usage          Type ST Offset   Length
+I (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (71) boot:  2 factory          factory app      00 00 00010000 00100000
+I (77) boot: End of partition table
+I (81) esp_image: segment 0: paddr=00010020 vaddr=3c030020 size=0e5b0h ( 58800) map
+I (99) esp_image: segment 1: paddr=0001e5d8 vaddr=3fc94f00 size=01a40h (  6720) load
+I (101) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=25f90h (155536) map
+I (132) esp_image: segment 3: paddr=00045fb8 vaddr=3fc96940 size=02554h (  9556) load
+I (135) esp_image: segment 4: paddr=00048514 vaddr=40374000 size=10ea0h ( 69280) load
+I (152) esp_image: segment 5: paddr=000593bc vaddr=600fe100 size=0001ch (    28) load
+I (159) boot: Loaded app from partition at offset 0x10000
+I (159) boot: Disabling RNG early entropy source...
+I (170) octal_psram: vendor id    : 0x0d (AP)
+I (170) octal_psram: dev id       : 0x02 (generation 3)
+I (170) octal_psram: density      : 0x03 (64 Mbit)
+I (172) octal_psram: good-die     : 0x01 (Pass)
+I (176) octal_psram: Latency      : 0x01 (Fixed)
+I (181) octal_psram: VCC          : 0x01 (3V)
+I (185) octal_psram: SRF          : 0x01 (Fast Refresh)
+I (190) octal_psram: BurstType    : 0x01 (Hybrid Wrap)
+I (195) octal_psram: BurstLen     : 0x01 (32 Byte)
+I (199) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)
+I (204) octal_psram: DriveStrength: 0x00 (1/1)
+I (209) MSPI Timing: PSRAM timing tuning index: 5
+I (213) esp_psram: Found 8MB PSRAM device
+I (217) esp_psram: Speed: 80MHz
+I (220) cpu_start: Multicore app
+I (655) esp_psram: SPI SRAM memory test OK
+I (664) cpu_start: Pro cpu start user code
+I (664) cpu_start: cpu freq: 160000000 Hz
+I (664) app_init: Application information:
+I (665) app_init: Project name:     CAM
+I (668) app_init: App version:      1
+I (671) app_init: Compile time:     Apr 27 2025 10:19:51
+I (676) app_init: ELF file SHA256:  d24477c89...
+I (681) app_init: ESP-IDF:          5.4.1
+I (684) efuse_init: Min chip rev:     v0.0
+I (688) efuse_init: Max chip rev:     v0.99 
+I (692) efuse_init: Chip rev:         v0.1
+I (696) heap_init: Initializing. RAM available for dynamic allocation:
+I (702) heap_init: At 3FC99810 len 0004FF00 (319 KiB): RAM
+I (707) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM
+I (713) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM
+I (718) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM
+I (723) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator
+I (730) spi_flash: detected chip: gd
+I (733) spi_flash: flash io: dio
+W (736) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`
+I (745) sleep_gpio: Configure to isolate all GPIO pins in sleep state
+I (752) sleep_gpio: Enable automatic switching of GPIO sleep configuration
+I (759) main_task: Started on CPU0
+I (769) main_task: Calling app_main()
+I (6769) s3 ll_cam: DMA Channel=0
+I (6769) cam_hal: cam init ok
+I (6769) sccb: pin_sda 4 pin_scl 5
+I (6769) sccb: sccb_i2c_port=1
+I (6779) camera: Detected camera at address=0x30
+I (6779) camera: Detected OV2640 camera
+I (6779) camera: Camera PID=0x26 VER=0x42 MIDL=0x7f MIDH=0xa2
+I (6859) cam_hal: buffer_size: 16384, half_buffer_size: 1024, node_buffer_size: 1024, node_cnt: 16, total_cnt: 1
+I (6859) cam_hal: Allocating 1843 Byte frame buffer in PSRAM
+I (6859) cam_hal: Allocating 1843 Byte frame buffer in PSRAM
+I (6869) cam_hal: cam config ok
+I (6869) ov2640: Set PLL: clk_2x: 0, clk_div: 0, pclk_auto: 0, pclk_div: 8
+Guru Meditation Error: Core  0 panic'ed (IntegerDivideByZero). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x4200a346  PS      : 0x00060330  A0      : 0x8037cc80  A1      : 0x3fca1ee0  
+A2      : 0x00000000  A3      : 0x00000000  A4      : 0x3fc993e0  A5      : 0x00060023  
+A6      : 0x00000000  A7      : 0x3fc98ea4  A8      : 0x3c040a78  A9      : 0x00000000  
+A10     : 0x3fc9d3bc  A11     : 0x00000000  A12     : 0x00000000  A13     : 0x00000400  
+A14     : 0x00000000  A15     : 0x3fca177c  SAR     : 0x0000000c  EXCCAUSE: 0x00000006  
+EXCVADDR: 0x00000000  LBEG    : 0x40056f5c  LEND    : 0x40056f72  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x4200a343:0x3fca1ee0 0x4037cc7d:0x3fca1f20
+  #0  0x4200a343 in cam_task at .pio/libdeps/esp32s3camlcd/esp32-camera/driver/cam_hal.c:142
+  #1  0x4037cc7d in vPortTaskWrapper at /home/brock/.platformio/packages/framework-espidf@src-b1208ff3612f5ed4a85e916decb6f42c/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+
+
+
+
+
+ELF file SHA256: d24477c89
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x2a (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40376bf9
+  #0  0x40376bf9 in esp_restart_noos at /home/brock/.platformio/packages/framework-espidf@src-b1208ff3612f5ed4a85e916decb6f42c/components/esp_system/port/soc/esp32s3/system_internal.c:160
+
+SPIWP:0xee
+mode:DOUT, clock div:1
+load:0x3fce2810,len:0x15a0
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xd20
+load:0x403cb700,len:0x2f00
+entry 0x403c8920
+I (26) boot: ESP-IDF 5.4.1 2nd stage bootloader
+I (26) boot: compile time Apr 27 2025 10:20:16
+I (27) boot: Multicore bootloader
+I (27) boot: chip revision: v0.1
+I (29) boot: efuse block revision: v1.2
+I (33) boot.esp32s3: Boot SPI Speed : 80MHz
+I (37) boot.esp32s3: SPI Mode       : DOUT
+I (41) boot.esp32s3: SPI Flash Size : 8MB
+I (44) boot: Enabling RNG early entropy source...
+I (49) boot: Partition Table:
+I (51) boot: ## Label            Usage          Type ST Offset   Length
+I (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (71) boot:  2 factory          factory app      00 00 00010000 00100000
+I (77) boot: End of partition table
+I (81) esp_image: segment 0: paddr=00010020 vaddr=3c030020 size=0e5b0h ( 58800) map
+I (99) esp_image: segment 1: paddr=0001e5d8 vaddr=3fc94f00 size=01a40h (  6720) load
+I (101) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=25f90h (155536) map
+I (132) esp_image: segment 3: paddr=00045fb8 vaddr=3fc96940 size=02554h (  9556) load
+I (135) esp_image: segment 4: paddr=00048514 vaddr=40374000 size=10ea0h ( 69280) load
+I (152) esp_image: segment 5: paddr=000593bc vaddr=600fe100 size=0001ch (    28) load
+I (159) boot: Loaded app from partition at offset 0x10000
+I (159) boot: Disabling RNG early entropy source...
+I (170) octal_psram: vendor id    : 0x0d (AP)
+I (170) octal_psram: dev id       : 0x02 (generation 3)
+I (170) octal_psram: density      : 0x03 (64 Mbit)
+I (172) octal_psram: good-die     : 0x01 (Pass)
+I (176) octal_psram: Latency      : 0x01 (Fixed)
+I (181) octal_psram: VCC          : 0x01 (3V)
+I (185) octal_psram: SRF          : 0x01 (Fast Refresh)
+I (190) octal_psram: BurstType    : 0x01 (Hybrid Wrap)
+I (195) octal_psram: BurstLen     : 0x01 (32 Byte)
+I (199) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)
+I (204) octal_psram: DriveStrength: 0x00 (1/1)
+I (209) MSPI Timing: PSRAM timing tuning index: 5
+I (213) esp_psram: Found 8MB PSRAM device
+I (217) esp_psram: Speed: 80MHz
+I (220) cpu_start: Multicore app
+I (655) esp_psram: SPI SRAM memory test OK
+I (664) cpu_start: Pro cpu start user code
+I (664) cpu_start: cpu freq: 160000000 Hz
+I (664) app_init: Application information:
+I (665) app_init: Project name:     CAM
+I (668) app_init: App version:      1
+I (671) app_init: Compile time:     Apr 27 2025 10:19:51
+I (676) app_init: ELF file SHA256:  d24477c89...
+I (681) app_init: ESP-IDF:          5.4.1
+I (684) efuse_init: Min chip rev:     v0.0
+I (688) efuse_init: Max chip rev:     v0.99 
+I (692) efuse_init: Chip rev:         v0.1
+I (696) heap_init: Initializing. RAM available for dynamic allocation:
+I (702) heap_init: At 3FC99810 len 0004FF00 (319 KiB): RAM
+I (707) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM
+I (713) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM
+I (718) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM
+I (723) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator
+I (730) spi_flash: detected chip: gd
+I (733) spi_flash: flash io: dio
+W (736) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`
+I (746) sleep_gpio: Configure to isolate all GPIO pins in sleep state
+I (752) sleep_gpio: Enable automatic switching of GPIO sleep configuration
+I (759) main_task: Started on CPU0
+I (769) main_task: Calling app_main()

@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/home/brock/Documents/PlatformIO/Projects/CAM/.pio/build/esp32s3camlcd/CMakeFiles/bootloader
+/home/brock/Documents/PlatformIO/Projects/CAM/.pio/build/esp32s3camlcd/CMakeFiles/bootloader.rule
+/home/brock/Documents/PlatformIO/Projects/CAM/.pio/build/esp32s3camlcd/CMakeFiles/bootloader-complete.rule
+/home/brock/Documents/PlatformIO/Projects/CAM/.pio/build/esp32s3camlcd/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/home/brock/Documents/PlatformIO/Projects/CAM/.pio/build/esp32s3camlcd/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/home/brock/Documents/PlatformIO/Projects/CAM/.pio/build/esp32s3camlcd/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/home/brock/Documents/PlatformIO/Projects/CAM/.pio/build/esp32s3camlcd/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/home/brock/Documents/PlatformIO/Projects/CAM/.pio/build/esp32s3camlcd/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/home/brock/Documents/PlatformIO/Projects/CAM/.pio/build/esp32s3camlcd/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/home/brock/Documents/PlatformIO/Projects/CAM/.pio/build/esp32s3camlcd/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

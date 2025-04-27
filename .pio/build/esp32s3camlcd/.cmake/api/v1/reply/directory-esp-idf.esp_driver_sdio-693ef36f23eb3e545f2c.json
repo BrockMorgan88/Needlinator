@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "esp-idf/esp_driver_sdio",
+		"source" : "/home/brock/.platformio/packages/framework-espidf@src-b1208ff3612f5ed4a85e916decb6f42c/components/esp_driver_sdio"
+	}
+}
